@@ -1,6 +1,6 @@
 {
   "name": "@webdevbynight/test-publish-monolith-pnpm-release-change",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Test published monolithic repo for release-change use with pnpm",
   "keywords": [],
   "homepage": "https://github.com/webdevbynight/test-publish-monolith-pnpm-release-change",
