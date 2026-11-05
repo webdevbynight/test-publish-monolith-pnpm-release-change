@@ -11,7 +11,7 @@ Test published monolithic repo for release-change use with pnpm
 ![Node support](https://img.shields.io/node/v/test-publish-monolith-pnpm-release-change)
 ![Build status](https://img.shields.io/github/actions/workflow/status/webdevbynight/test-publish-monolith-pnpm-release-change/run-tests.yml)
 
-**@webdevbynight/test-publish-monolith-pnpm-release-change**
+**@webdevbynight/test-publish-monolith-pnpm-release-change** is a repo to test publishing on NPM with `release-change`.
 
 ## Installation
 
