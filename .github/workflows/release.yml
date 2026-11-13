@@ -29,9 +29,7 @@ jobs:
       - name: Build the package
         run: pnpm build
       - name: Release
+        uses: release-change/action@2a0a0a3c7ef4f56af4c58dd89cfab029ac306aaa # v0.0.1
         env:
-          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-          ISSUE_PR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
-        run: pnpx @release-change/cli
