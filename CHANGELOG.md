@@ -1,5 +1,15 @@
 # @webdevbynight/test-publish-monolith-pnpm-release-change
 
+## 0.0.4
+
+### Patch changes
+
+- use `release-change/action` to publish release (#8) ([`8557aab`](https://github.com/webdevbynight/test-publish-monolith-pnpm-release-change/commit/8557aab09d607a5fb5a83afa7de96cfee9662b65))
+
+---
+
+**Full changelog:** [`v0.0.3...v0.0.4`](https://github.com/webdevbynight/test-publish-monolith-pnpm-release-change/compare/v0.0.3...v0.0.4)
+
 ## 0.0.3
 
 ### Patch changes
