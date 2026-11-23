@@ -18,9 +18,16 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
+      - name: Create GitHub App token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        id: app-token
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          persist-credentials: false
           fetch-depth: 0
       - name: Install pnpm and setup Node.js
         uses: ./.github/actions/pnpm-node
@@ -29,7 +36,7 @@ jobs:
       - name: Build the package
         run: pnpm build
       - name: Release
-        uses: release-change/action@2a0a0a3c7ef4f56af4c58dd89cfab029ac306aaa # v0.0.1
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
+        uses: release-change/action@v0
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          npm-token: ${{ secrets.NPM_TOKEN }}
